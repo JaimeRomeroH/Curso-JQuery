@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <p>Hola soy una etiqueta P</p>
+    <p class="parrafo">Hola soy una etiqueta P</p>
+
+    <div id="mensaje">Hola soy una etiqueta div</div>
+
+    <div class="alerta">Hola soy una etiqueta div</div>
+    <div class="alerta">Hola soy una etiqueta div</div>
+
+    <script>
+         $(function(){
+            //Selector mediante el nombre de la etiqueta
+            $("p").html("¡Hola mundo!");
+            
+            //Selector mediante id
+            $("#mensaje").html("¡Hola div!");
+
+            //Selector mediante clases
+            $(".alerta").html("¡Hola clase!");
+
+            //Selector para todos los elementos que hay en el documento
+            $("*").css("color", "red");
+
+            //Selector para una etiqueta que tiene una clase
+            $("p.parrafo").html("Hola Jaime");
+        });
+    </script>
+
+</body>
+</html>
