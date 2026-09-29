@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <p>Presiona este texto</p>
+    <p>Presiona 2 veces este texto</p>
+    <span id="documento">Pasa el mouse aqui</span> <br> <br>
+    <span id="documentohover">Demostracion de hover</span> <br> <br>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+
+    <label for="correo">Correo</label>
+    <input type="email" name="correo" id="correo"> <br> <br>
+
+    <div id="evento-on">Contenido para el evento on</div>
+
+    <div id="eventomultiple">Contenido para el evento multiple</div>
+
+    <p id="mensaje"></p>
+
+    <script>
+        //Este codigo inicia los scripts de JQuery una vez que este listo el HTML
+        $(function(){
+
+            //Evento click
+            $("p").click(function(){
+                $("#mensaje").html("Hola soy el resultado del evento click");
+            });
+
+            //Evento doble click
+            $("p").dblclick(function(){
+                $("#mensaje").html("Hola soy el resultado del doble click");
+            });
+            
+            //Evento mouse enter
+            $("#documento").mouseenter(function(){
+                $("#mensaje").html("Hola soy el resultado del evento mouseenter");
+                $("#mensaje").css("color", "black");
+            });
+
+            //Evento mouseleave
+            $("#documento").mouseleave(function(){
+                $("#mensaje").html("Hola soy el resultado del evento mouseleave");
+                $("#mensaje").css("color", "red");
+            });
+
+            //Evento hover
+            $("#documentohover").hover(function(){
+                $("#mensaje").html("Hola soy el hover");
+                $("#mensaje").css("color", "black");
+            }, function(){
+                $("#mensaje").html("Adios!");
+                $("#mensaje").css("color", "red");
+            });
+
+            //Eventos focus y blur
+            $("input").focus(function(){
+                $(this).css("background-color", "green");
+            });
+
+            $("input").blur(function(){
+                $(this).css("background-color", "red");
+            });
+
+            //Evento on
+            //Aplicado al evento click
+            $("#evento-on").on("click", function(){
+                $(this).css("background-color", "red");
+            });
+
+            //Evento multiple usando on
+            $("#eventomultiple").on({
+                click:function(){
+                    $(this).css("background-color", "green");
+                },
+                mouseenter:function(){
+                    $(this).css("background-color", "yellow");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color", "red");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
