@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <input type="button" id="btnmensaje" value="Presiona para desencandenar">
+    <div id="mensaje">Hola soy la etiqueta que maneja desencadenadores</div>
+    <script>
+        $(function(){
+            $("#btnmensaje").click(function(){
+                $("#mensaje").css("color", "green").slideUp(1000).slideDown(500);
+            });
+        });
+    </script>
+</body>
+</html>

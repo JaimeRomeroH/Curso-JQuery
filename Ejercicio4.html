@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 4</title>
+</head>
+<body>
+
+   <style>
+      #btnslidedown, #btnslideup, #btnslidetoggle, #contenido{
+         text-align: center;
+         background-color: aqua;
+         border: 1px solid red;
+      }
+
+      #btnslidedown, #btnslideup, #btnslidetoggle{
+        cursor: pointer;
+      }
+
+       #btnslidedown:hover, #btnslideup:hover, #btnslidetoggle:hover{
+        background: #aaa;
+      }
+      
+      #contenido{
+        padding: 50px;
+      }
+   </style> 
+   
+   <div id="btnslidedown">Expandir</div>
+   <div id="btnslideup">Contraer</div>
+   <div id="btnslidetoggle">Expandir/Contraer</div>
+   <div id="contenido">Mensaje</div>
+
+   <script>
+       $(function(){
+          //slideUp y slideDown
+          $("#btnslideup").click(function(){
+            $("#contenido").slideUp("slow");
+          });
+
+          $("#btnslidedown").click(function(){
+            $("#contenido").slideDown("slow");
+          });
+          
+          //slideToggle (es una combinacion de slideUp y slideDown)
+          $("#btnslidetoggle").click(function(){
+            $("#contenido").slideToggle("slow");
+          });
+       });       
+   </script>
+</body>
+</html>

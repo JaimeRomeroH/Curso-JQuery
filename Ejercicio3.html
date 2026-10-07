@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <input type="button" id="btnEfecto1" value="Efecto 1 (hide)">
+    <input type="button" id="btnEfecto2" value="Efecto 2 (show)">
+    <input type="button" id="btnEfecto3" value="Efecto 3 (toggle)">
+    <input type="button" id="btnEfecto4" value="Efecto 4 (fadeIn)">
+    <input type="button" id="btnEfecto5" value="Efecto 5 (fadeOut)">
+    <input type="button" id="btnEfecto6" value="Efecto 6 (fadeToggle)">
+    <input type="button" id="btnEfecto7" value="Efecto 7 (fadeTo)">
+    <div id="lblmensaje">Mensaje...</div>
+
+    <script>
+        $(function(){
+            //Efecto hide y show (el tiempo es opcional)
+            $("#btnEfecto1").click(function(){
+                $("#lblmensaje").hide(1000);
+            });
+
+            $("#btnEfecto2").click(function(){
+                $("#lblmensaje").show(3000);
+            });
+
+            //Efecto toggle (es una combinacion de hide y show)
+            $("#btnEfecto3").click(function(){
+                $("#lblmensaje").toggle(3000);
+            });
+
+            //Efecto fadeIn y fadeOut
+            $("#btnEfecto4").click(function(){
+                $("#lblmensaje").fadeIn(1000);
+            });
+
+            $("#btnEfecto5").click(function(){
+                $("#lblmensaje").fadeOut(1000);
+            });
+
+            //Efecto fadeToggle (es una combinacion entre fadeIn y fadeOut)
+            $("#btnEfecto6").click(function(){
+                $("#lblmensaje").fadeToggle();
+            });
+
+            //Efecto fadeTo
+            $("#btnEfecto7").click(function(){
+                $("#lblmensaje").fadeTo("slow", 0.1);
+                $("#lblmensaje").fadeTo("slow", 1);   //se pueden colocar mas intervalos
+            });
+        });
+    </script>
+</body>
+</html>
