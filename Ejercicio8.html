@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <div id="texto">Hola soy un <b>div</b> <br/><br/></div>
+    <img src="./adtr-bobby.jpg" alt="" id="imgAttr">
+    <hr>
+    <h1>Resultados obtenidos (aplicando el set)</h1>
+    <div id="resultado"></div>
+    <img src="" alt="" id="imgResultado">
+    <br>
+    <input id="txtresultado" type="text" value="">
+    <hr>
+    <br>
+    <input type="button" id="btnText" value="Asignar texto(set)">
+    <input type="button" id="btnHTML" value="Asignar html(get)">
+    <input type="button" id="btnVal" value="Asignar val(get)">
+    <input type="button" id="btnAttr" value="Asignar Attr(get)">
+
+    <script>
+        //SET
+        $(function(){
+            $("#btnText").click(function(){
+                texto = $("#texto").text();
+                $("#resultado").text(texto);                
+            });
+
+            $("#btnHTML").click(function(){
+                html = $("#texto").html();
+                $("#resultado").html(html);
+            });
+
+            $("#btnVal").click(function(){
+                val = $("#texto").text();
+                $("#txtresultado").val(val);
+            });
+
+            $("#btnAttr").click(function(){
+                attr = $("#imgAttr").attr("src");
+                $("#imgResultado").attr("src", attr)
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 7</title>
+</head>
+<body>
+
+    <div id="texto">Hola soy un div <br/><br/></div>
+    <img src="./adtr-bobby.jpg" alt="" id="imgAttr">
+    <div id="resultado"></div>
+    <br>
+    <input type="button" id="btnText" value="Obtener texto(get)">
+    <input type="button" id="btnHTML" value="Obtener html(get)">
+    <input type="text" id="txtContenido" value="Jaime Romero">
+    <input type="button" id="btnVal" value="Obtener val(get)">
+    <input type="button" id="btnAttr" value="Obtener Attr(get)">
+
+    <script>
+        //GET
+        $(function(){
+            $("#btnText").click(function(){
+                texto = $("#texto").text();
+                alert(texto);                
+            });
+
+            $("#btnHTML").click(function(){
+                html = $("#texto").html();
+                alert(html);
+            });
+
+            $("#btnVal").click(function(){
+                val = $("#txtContenido").val();
+                alert(val);
+            });
+
+            $("#btnAttr").click(function(){
+                attr = $("#imgAttr").attr("src");
+                alert(attr);
+            });
+        });
+    </script>
+</body>
+</html>
