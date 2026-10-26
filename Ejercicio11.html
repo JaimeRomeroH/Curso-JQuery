@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <div id="idEmpty" style="background-color: aqua; height: 90px;">Hola soy un texto</div>
+    <input type="button" id="btnEmpty" value="Empty">
+    <script>
+        $(function(){
+            $("#btnEmpty").click(function(){
+                $("#idEmpty").empty();
+            });
+        });
+    </script>
+</body>
+</html>

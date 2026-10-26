@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <div id="idRemover" style="background-color: aqua;">Hola soy un texto</div>
+    <input type="button" id="btnRemove" value="Remover">
+    <script>
+        $(function(){
+            $("#btnRemove").click(function(){
+                $("#idRemover").remove();
+            });
+        });
+    </script>
+</body>
+</html>

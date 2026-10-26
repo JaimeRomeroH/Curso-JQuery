@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <style>
+        .colorAzul{
+            background-color: aqua; 
+            height: 90px;
+        }
+    </style>
+    <div id="idMensaje">Hola soy un texto</div>
+    <input type="button" id="btnCambio" value="addClass(Agregar)">
+    <input type="button" id="btnQuitar" value="removeClass(Quitar)">
+    <input type="button" id="btnToggle" value="toggleClass(Agregar/Quitar)">
+
+    <script>
+        $(function(){
+            $("#btnCambio").click(function(){
+                $("#idMensaje").addClass("colorAzul");
+            });
+
+            $("#btnQuitar").click(function(){
+                $("#idMensaje").removeClass("colorAzul");
+            });
+
+            $("#btnToggle").click(function(){
+                $("#idMensaje").toggleClass("colorAzul");
+            });
+        });
+    </script>
+</body>
+</html>

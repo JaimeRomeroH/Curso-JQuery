@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Ejercicio 9</title>
+</head>
+<body>
+   <p>Hola mundo</p>
+   <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+   </ul>
+   <input type="button" id="btnAppend" value="Agregar(Append)">
+   <input type="button" id="btnPrepend" value="Agregar(Prepend)">
+
+   <script>
+        $(function(){
+            $("#btnAppend").click(function(){
+                $("p").append("<hr> Hola");
+            });
+
+            $("#btnPrepend").click(function(){
+                $("ul").prepend("<li>Elemento 0</li>");
+            });
+        });
+   </script> 
+</body>
+</html>
